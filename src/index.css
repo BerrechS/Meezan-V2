@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* CSS Variables for Kamelizer-inspired theme */
+:root {
+  /* Base colors */
+  --base-background: #F5F2E9;
+  --card-background: #FFFFFF;
+  --main-text: #2C2825;
+  --contrast-white: #FFFFFF;
+  
+  /* Accent colors */
+  --primary-accent: #767B52;
+  --secondary-accent: #C67138;
+  --tertiary-accent: #5A6F5E;
+  
+  /* Theme-aware variables */
+  --bg-primary: var(--base-background);
+  --bg-secondary: #F9F7F4;
+  --bg-tertiary: #F0EDE6;
+  --surface: var(--card-background);
+  --surface-hover: #F9F7F4;
+  --surface-elevated: #FFFFFF;
+  
+  --text-primary: var(--main-text);
+  --text-secondary: #6B6B6B;
+  --text-tertiary: #9CA3AF;
+  
+  --accent: var(--primary-accent);
+  --accent-hover: #6A7049;
+  --accent-light: rgba(118, 123, 82, 0.1);
+  
+  --secondary-accent-color: var(--secondary-accent);
+  --secondary-accent-light: rgba(198, 113, 56, 0.1);
+  
+  --tertiary-accent-color: var(--tertiary-accent);
+  
+  --border: #E5E7EB;
+  --border-light: #F3F4F6;
+  
+  --prayer-bg: rgba(118, 123, 82, 0.05);
+  --quran-bg: rgba(90, 111, 94, 0.03);
+  
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #404040;
+  --surface: #2d2d2d;
+  --surface-hover: #404040;
+  --surface-elevated: #404040;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  
+  --accent: #8B9467;
+  --accent-hover: #9BA373;
+  --accent-light: rgba(139, 148, 103, 0.2);
+  
+  --secondary-accent-color: #D4824A;
+  --secondary-accent-light: rgba(212, 130, 74, 0.2);
+  
+  --border: #374151;
+  --border-light: #4b5563;
+  
+  --prayer-bg: rgba(139, 148, 103, 0.1);
+  --quran-bg: rgba(139, 148, 103, 0.05);
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
